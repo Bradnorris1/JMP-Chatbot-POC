@@ -1,0 +1,123 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        /* Add CSS styles for the chat interface */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .phone-screen {
+            width: 320px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            overflow-y: scroll;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .message {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+            max-width: 70%;
+        }
+
+        .bot-message {
+            background-color: #DCF8C6;
+            text-align: left;
+        }
+
+        .user-message {
+            background-color: #007AFF;
+            color: #FFF;
+            text-align: right;
+        }
+
+        #chat-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        #user-msg {
+            width: 80%;
+            padding: 10px;
+        }
+
+        #send-btn {
+            padding: 10px;
+        }
+
+        .button-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button-link img {
+            vertical-align: middle;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .button-link .button-text {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="phone-screen">
+        <div class="chat-container" id="chat-container"></div>
+        <form id="chat-form">
+            <input type="text" id="user-msg" placeholder="Enter message" autocomplete="off">
+            <input type="submit" id="send-btn" value="Send">
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#chat-form').submit(function (e) {
+                e.preventDefault();
+                var message = $('#user-msg').val();
+                $('#chat-container').append('<div class="message user-message">' + message + '</div>');
+                $('#user-msg').val('');
+                $.ajax({
+                    url: '/get_response',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {msg: message},
+                    success: function (response) {
+                        var botResponse = response['response'];
+                        $('#chat-container').append('<div class="message bot-message">' + botResponse + '</div>');
+                        $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
