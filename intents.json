@@ -1,0 +1,150 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "What's up?",
+        "yo"
+      ],
+      "responses": [
+        "Hello, I am a JMP chatbot. How can I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "If you still need assistance contact us at support@jmp.com, Have a nice day!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help, feel free to continue asking me questions or contact us at support@jmp.com if you need further assitance."]
+    },
+    {
+        "tag": "Import Data",
+        "patterns": ["I'd like to import data", "How do I import a file?", "How do I import data into JMP?", "I'd like to import a file"],
+        "responses": ["Sure! What file-type is your data formatted in?"]
+    },
+    {
+        "tag": "Import Text Data",
+        "patterns": ["text data", "import text data", "import text file", "I'd like to import a text file", "How do I import text data?"],
+        "responses": ["To import text data in JMP software, you can use the 'Import Text Data' feature."]
+    },
+    {
+        "tag": "Import Excel Data",
+        "patterns": ["excel", "import excel data", "import excel file", "I'd like to import an excel file", "How do I import excel data?", "It's an Excel document"],
+        "responses": ["To import Excel data in JMP software, you can use the 'Import Excel Data' feature."]
+    },
+    {
+        "tag": "Import XML Data",
+        "patterns": ["XML data", "import XML data", "import XML file", "I'd like to import an XML file", "How do I import XML data?"],
+        "responses": ["To import XML data in JMP software, you can use the 'Import XML Data' feature."]
+    },
+    {
+        "tag": "Import JSON Data",
+        "patterns": ["JSON", "JSON data", "import JSON data", "import JSON file", "I'd like to import a JSON file", "How do I import JSON data?"],
+        "responses": ["To import JSON data in JMP software, you can use the 'Import JSON Data' feature."]
+    },
+    {
+        "tag": "Import SAS Data",
+        "patterns": ["SAS data", "import SAS data", "import SAS file", "I'd like to import a SAS file", "How do I import SAS data?"],
+        "responses": ["To import SAS data in JMP software, you can use the 'Import SAS Data' feature."]
+    },
+    {
+        "tag": "Import PDF Data",
+        "patterns": ["PDF Data", "import PDF data", "import PDF file", "I'd like to import a PDF file", "How do I import PDF data?"],
+        "responses": ["To import PDF data in JMP software, you can use the 'Import PDF Data' feature."]
+    },
+    {
+        "tag": "Import CSV Data",
+        "patterns": ["CSV Data", "import CSV data", "import CSV file", "I'd like to import a CSV file", "How do I import CSV data?"],
+        "responses": ["To import CSV data in JMP software, you can use the 'Import CSV Data' feature."]
+    },
+    {
+        "tag": "Import R Data",
+        "patterns": ["R Data", "import R data", "import R file", "I'd like to import an R file", "How do I import R data?"],
+        "responses": ["To import R data in JMP software, you can use the 'Import R Data' feature."]
+    },
+    {
+        "tag": "Import Python Data",
+        "patterns": ["python data", "import python data", "import python file", "I'd like to import a python file", "How do I import python data?"],
+        "responses": ["To import python data in JMP software, you can use the 'Import Python Data' feature."]
+    },
+    {
+        "tag": "Import MATLAB Data",
+        "patterns": ["MATLAB data", "import MATLAB data", "import MATLAB file", "I'd like to import a MATLAB file", "How do I import MATLAB data?"],
+        "responses": ["To import MATLAB data in JMP software, you can use the 'Import MATLAB Data' feature."]
+    },
+    {
+        "tag": "Query Database",
+        "patterns": ["query database", "query a database", "How do I query a database?"],
+        "responses": ["Sure! What type of data are you trying to access?"]
+    },
+    {
+        "tag": "Query Data",
+        "patterns": ["query data warehouse", "data warehouse", "query data lake", "data lake", "query data historian", "data historian"],
+        "responses": ["To query a data [warehouse, lake, historian] in JMP software, you can use the 'Query Database' feature."]
+    },
+    {
+        "tag": "Query SQL",
+        "patterns": ["query SQL database", "SQL database", "how do I query an SQL database?"],
+        "responses": ["To query an SQL database in JMP software, you can use the 'Query SQL Database' feature."]
+    },
+    {
+        "tag": "Query ODBC",
+        "patterns": ["query ODBC database", "ODBC database", "how do I query an ODBC database?"],
+        "responses": ["To query an ODBC database in JMP software, you can use the 'Query ODBC Database' feature."]
+    },
+    {
+        "tag": "Web Data Access",
+        "patterns": ["web data access", "I want to access data from the web", "how do I access data from the internet?"],
+        "responses": ["What type of data are you trying to access?"]
+    },
+    {
+        "tag": "Web Data Access API",
+        "patterns": ["API", "Access data from API on the web", "how do I get data from an API?"],
+        "responses": ["To access data from an API in JMP software, you can use the 'API Access' feature."]
+    },
+    {
+        "tag": "Web Data Access Internet",
+        "patterns": ["Internet", "Access data from Internet", "how do I get data from the Internet?"],
+        "responses": ["To access data from the internet in JMP software, you can use the 'Internet Access' feature."]
+    },
+    {
+        "tag": "Web Data Access Google Sheets",
+        "patterns": ["Google Sheets", "Access data from Google Sheets", "how do i get data from google sheets"],
+        "responses": ["To access data from google sheets in JMP software, you can use the 'Google Sheets Access' feature."]
+    },
+    {
+        "tag": "Data Connector",
+        "patterns": ["Data Connector", "I want to use the data connector", "how do I use the data connector?"],
+        "responses": ["Are you trying to use a custom data interface or the OSIsoft PI connector?"]
+    },
+    {
+        "tag": "Data Connector Custom Data Interface",
+        "patterns": ["Custom Data Interface", "I want to use the custom data interface", "how do I use the custom data interface?"],
+        "responses": ["To use the custom data interface in JMP software, you can use the 'Custom Data Interface' feature."]
+    },
+    {
+        "tag": "Data Connector OSIsoft PI connector",
+        "patterns": ["OSIsoft PI connector", "I want to use the OSIsoft PI connector", "how do I use the OSIsoft PI connector?"],
+        "responses": ["To use the OSIsoft PI connector in JMP software, you can use the 'OSIsoft PI connector' feature."]
+    },
+    {
+        "tag": "Getting Started with JMP",
+        "patterns": ["What are some resources to get me started with JMP?", "I want to learn more about JMP"],
+        "responses": ["Getting Started with JMP: On Demand is a great resource to start learning JMP! Find it below: <a class='button-link' href='https://www.wikipedia.com' target='_blank'><img src='/static/JMP_Logo.jpg' alt='Getting Started with JMP: On Demand'><div class='button-text'>Getting Started with JMP</div></a>"]
+    }
+    
+    
+      
+  ]
+}
